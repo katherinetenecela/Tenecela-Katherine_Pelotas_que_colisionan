@@ -8,6 +8,7 @@ function setup() {
     p.push(newP);
   }
 }
+
 function draw() {
   background(255);
   for (let i = 0; i < np; i++) {
@@ -15,7 +16,8 @@ function draw() {
     p[i].display();
 
     for (let iP = 0; iP < np; iP++) {
-      if (i == iP) {
+      if (i !== iP) {
+        // Corregir condición de colisión
         p[i].colision(p[iP]);
       }
     }
