@@ -1,9 +1,9 @@
 class Pelotita {
   constructor() {
-    this.pos = createVector(random(width), random(heihgt));
+    this.pos = createVector(random(width), random(height));
     this.vel = createVector(random(5), 0);
-    this.vel = rotate(random(tWO_PI));
-    this.c = color(300, 150, 30);
+    this.vel = rotate(random(TWO_PI));
+    this.c = color(200, 150, 30);
 
     this.diam = int(random(10, 100));
   }
@@ -30,7 +30,7 @@ class Pelotita {
     circle(this.pos.x, this.pos.y, this.diam);
   }
 
-  colorRamdon() {
+  colorRandom() {
     this.c = color(random(20), random(255), random(255));
   }
 
