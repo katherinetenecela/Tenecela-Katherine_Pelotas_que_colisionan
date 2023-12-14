@@ -10,14 +10,13 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0, 25, 0);
   for (let i = 0; i < np; i++) {
     p[i].update();
     p[i].display();
 
     for (let iP = 0; iP < np; iP++) {
       if (i !== iP) {
-        // Corregir condición de colisión
         p[i].colision(p[iP]);
       }
     }
